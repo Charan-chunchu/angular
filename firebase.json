@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "angular1-practice",
     "public": "public",
     "ignore": [
       "firebase.json",
