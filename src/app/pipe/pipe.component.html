@@ -1,0 +1,53 @@
+<div class="container mt-5">
+  <div class="row mt-5">
+    <h2>ANGULAR PIPE</h2>
+    <div class="col-md-4 mt-5" style="border-style: inset"><h5>DatePipe:</h5>
+      <div>
+        {{myDate | date:'short'}}
+      </div>
+    </div>
+    <div class="col-md-4 mt-5"><h5>UpperCasePipe:</h5>
+      <div>
+        {{name | uppercase}}
+      </div>
+     </div>
+    <div class="col-md-4 mt-5"><h5>TitleCasePipe:</h5>
+      <div>
+        {{name | titlecase}}
+      </div>
+     </div>
+    <div class="col-md-4 mt-5"><h5>LowerCasePipe:</h5>
+      <div>
+        {{lower | lowercase}}
+      </div>
+    </div>
+    <div class="col-md-4 mt-5" style="border-style: groove"><h5>salary:</h5>
+      <div>
+        {{salary | currency : 'INR'}}
+      </div>
+    </div>
+    <div class="col-md-4 mt-5"><h5>json:</h5>
+      <div>
+        {{person1 | json}}
+      </div>
+    </div>
+    <div class="col-md-4 mt-5"><h5>Date:</h5>
+      <div>
+        {{dob | date : 'dd/MM/yyyy'}}
+      </div>
+    </div>
+    <div class="col-md-4 mt-5"><h5>PercentPipe:</h5>
+      <div>
+        {{num | percent}}
+      </div>
+    </div>
+    <div class="col-md-4 mt-5" style="border-style: outset"><h5>SlicePipe:</h5>
+      <div>
+        {{company}}
+      </div>
+      <div>
+        {{company | slice:2:7}}
+      </div>
+    </div>
+  </div>
+</div>

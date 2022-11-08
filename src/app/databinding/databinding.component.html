@@ -1,0 +1,86 @@
+<div class="container mt-5">
+  <div class="row  mt-5">
+    <div class="col-md-6  mt-5">
+      <div class="row padding-200px">
+        <h2><u>dropdown</u></h2>
+        <div class="col-sm-3">
+          <select class="dropdown">
+            <option *ngFor="let pizza of pizzaList">
+              {{pizza}}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6  mt-5">
+      <h2><u>radio</u> </h2>
+      <form #sampleForm="ngForm">
+        <div class="FormGroup">
+          <label>gender</label>
+          <div class="FormControl">
+            <label class="inline-radio">
+              <input type="radio" name="gender" value="male" ngModel>male
+            </label>
+            <label class="inline-radio">
+              <input type="radio" name="gender" value="female" ngModel>female
+            </label>
+          </div>
+          <button class="btn btn-primary">Submit</button>
+          <div>{{sampleForm.value | json}}</div>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-6  mt-5">
+      <h2><u>checkbox</u></h2>
+      <div class="container mt-5">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">
+                <input class="form-check-input" type="checkbox" [(ngModel)]="parentSelector" [value]="-1"
+                  (change)="onChangeFood($event)" />
+              </th>
+              <th scope="col">Food</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let n of food">
+              <th scope="row">
+                <input class="form-check-input" type="checkbox" [value]="n.id" [checked]="n.select"
+                  (change)="onChangeFood($event)" />
+              </th>
+              <td>{{ n.name }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-6  mt-5">
+      <h1>{{titleName}}</h1>
+      <input type="text" [(ngModel)]="name">
+      <h3>{{name}}</h3>
+    </div>
+  </div>
+</div>
+
+<div class="container  mt-5">
+  <h1><u>{{table}}</u></h1>
+  <table class='table table-striped'>
+    <tr>
+      <td>productId</td>
+      <td>productName</td>
+      <td>productCode</td>
+      <td>description</td>
+      <td>price</td>
+      <td>starRating</td>
+    </tr>
+    <tr *ngFor="let f of data">
+      <td>{{f.productId}}</td>
+      <td>{{f.productName}}</td>
+      <td>{{f.productCode}}</td>
+      <td>{{f.description}}</td>
+      <td>{{f.price}}</td>
+      <td>{{f.starRating}}</td>
+    </tr>
+  </table>
+</div>

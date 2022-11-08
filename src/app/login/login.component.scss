@@ -1,0 +1,103 @@
+$color_1: white;
+$color_2: black;
+$font-family_1: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+body {
+	background: rgb(214, 214, 214);
+	font-family: $font-family_1;
+}
+.container {
+	width: 1000px;
+	height: 550px;
+	margin: 100px auto;
+	display: flex;
+	background: rgb(214, 214, 214);
+	border-radius: 10px;
+	box-shadow: 5px 5px 7px gray, -5px -5px 7px gray;
+}
+.login {
+	width: 950px;
+}
+form {
+	width: 230px;
+	margin: 100px auto;
+	h1 {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bolder;
+	}
+	label {
+		display: block;
+		font-size: 16px;
+		font-weight: 600;
+		padding: 8px;
+	}
+}
+p {
+	text-align: center;
+	a {
+		text-decoration: none;
+		color: $color_2;
+	}
+}
+input {
+	width: 100%;
+	padding: 8px;
+	margin: 8px;
+	outline: none;
+	border: none;
+	border: 1px solid gray;
+	border-radius: 5px;
+}
+button {
+	width: 250px;
+	margin: 8px;
+	padding: 8px;
+	background: purple;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	color: $color_1;
+	font-size: 17px;
+	cursor: pointer;
+	transition: 0.5s;
+	span {
+		display: inline-block;
+		position: relative;
+		transition: 0.5s;
+		&:after {
+			content: "\00bb";
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			right: -20px;
+			transition: 0.5s;
+		}
+	}
+	&:hover {
+		span {
+			padding-right: 30px;
+			&:after {
+				opacity: 1;
+				right: 0;
+			}
+		}
+	}
+}
+hr {
+	border-top: 2px solid purple;
+}
+.pic {
+	width: 75%;
+	background: violet;
+	img {
+		width: 400px;
+		margin: 70px 0 0 100px;
+	}
+}
+img {
+	&:hover {
+		padding: 3px;
+		cursor: pointer;
+	}
+}
